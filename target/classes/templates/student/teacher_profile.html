@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+				th:replace="student/student_base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="container text-center">
+		<h1>Your Profile</h1>
+		
+		<div class="card">
+			<div class="card-body">
+				<img class="my_profile_picture" style="height:200px; width: 200px;" th:src="@{'/img/'+${teacher.imageUrl}}" alt="profile photo" />
+				<h1 th:text="${teacher.name}"></h1>
+				<div class="table-responsive">
+				<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">TEACHER -<span th:text="${teacher.id}"></span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Email</th>
+      <td><span th:text="${teacher.email}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">UserName</th>
+      <td><span th:text="${teacher.username}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Gender</th>
+      <td><span th:text="${teacher.gender}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Role</th>
+      <td><span th:text="${teacher.role}"></span></td>
+    </tr>
+    <tr>
+      <th scope="row">Age</th>
+      <td><span th:text="${teacher.age}"></span></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(() => {
+			$(".item").removeClass("active");
+			$("#profile").addClass("active");
+		});
+	</script>
+	</section>
+</body>
+</html>

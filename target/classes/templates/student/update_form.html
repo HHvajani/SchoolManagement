@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+				th:replace="student/student_base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="card mr-3 ml-2">
+			<div class="card-body">
+			
+	
+
+				<h1 class="text-center">Update Student</h1>
+				<div class="container-fluid mt-1">
+					<div class="row">
+						<div class="col-md-7 offset-md-2">
+							<form novalidate
+							th:action="@{/teacher/process-update}"
+							th:object="${students}"
+							enctype="multipart/form-data"
+							method="POST"
+							
+							class="mt-2">
+
+	<input type="hidden" th:value="${students.id}" name="id" />
+
+							<!-- First Name -->
+			
+<div class="input-group">
+	<div class="input-group-prepend">
+		<div class="input-group-text">
+			<i class="fa fa-plus"></i>
+		</div>
+	
+	</div>
+	<input required type="text" id="sname"
+	name="sname"
+	th:classappend="${#fields.hasErrors('sname') ? 'is-invalid':''}"	
+	placeholder="Enter Student Name" 
+	class="form-control"
+	th:value="${students.sname}"/>
+	
+	<div class="invalid-feedback" th:each="e: ${#fields.errors('sname')}" th:text="${e}">
+	</div>
+	</div>
+	
+			
+
+			<!-- Roll No. -->
+			
+<div class="input-group mt-3">
+<div class="input-group-prepend">
+	<div class="input-group-text">
+		<i class="fas fa-user-alt"></i>
+	</div>
+</div>
+
+<input required type="number" id="rollNo"
+name="rollNo"
+th:classappend="${#fields.hasErrors('rollNo') ? 'is-invalid':''}"
+placeholder="Enter Student Roll No." 
+class="form-control"
+th:value="${students.rollNo}"/>
+<div class="invalid-feedback" th:each="e: ${#fields.errors('rollNo')}" th:text="${e}">
+</div>
+</div>
+  
+  
+							
+<!-- Department -->
+<div class="input-group mt-3">
+	<div class="input-group-prepend">
+		<div class="input-group-text">
+			<i class="fas fa-user-alt"></i>
+		</div>
+	
+	</div>
+	<input required type="text" id="department"
+	name="department"
+	th:value="${students.department}"
+	th:classappend="${#fields.hasErrors('department') ? 'is-invalid':''}"
+	placeholder="Enter Student Department" 
+	class="form-control"/>
+	<div class="invalid-feedback" th:each="e: ${#fields.errors('department')}" th:text="${e}">
+</div>
+</div>
+							
+							
+	<!-- Email Field -->
+<div class="input-group mt-3">
+	<div class="input-group-prepend">
+		<div class="input-group-text">
+			@
+		</div>
+	
+	</div>
+	<input required type="email" id="email"
+	name="email"
+	th:value="${students.email}"
+	th:classappend="${#fields.hasErrors('email') ? 'is-invalid':''}"
+	placeholder="Enter Email Here" 
+	class="form-control"/>
+<div class="invalid-feedback" th:each="e: ${#fields.errors('email')}" th:text="${e}">
+</div>
+</div>
+
+<!-- Standard Field -->
+<div class="input-group mt-3">
+	<div class="input-group-prepend">
+		<div class="input-group-text">
+			<i class="fas fa-user-alt"></i>
+		</div>
+	
+	</div>
+	<input required type="number" id="standard"
+	name="standard"
+	th:value="${students.standard}"
+	th:classappend="${#fields.hasErrors('standard') ? 'is-invalid':''}"
+	placeholder="Enter Student Standard" 
+	class="form-control"/>
+<div class="invalid-feedback" th:each="e: ${#fields.errors('standard')}" th:text="${e}">
+</div>
+</div>
+							
+						
+							
+		
+	  <div class="input-group mt-3">
+		<div class="input-group-prepend">
+			<div class="input-group-text">
+				<i class="fas fa-user-alt"></i>
+			</div>
+		
+		</div>
+		<input type="number" id="age"
+		name="age"
+		th:value="${students.age}"
+		th:classappend="${#fields.hasErrors('age') ? 'is-invalid':''}"
+		placeholder="Enter Student age" 
+		class="form-control"/>
+<div class="invalid-feedback" th:each="e: ${#fields.errors('age')}" th:text="${e}">
+</div>
+	</div>
+  
+	    
+	    <!-- Gender field -->
+  <!-- <label for="inputEmail4">Gender : </label>
+  <div class="form-check-inline input-group mt-1">
+  <input class="form-check-input" 
+  type="radio" 
+  required
+  id="exampleRadios1" 
+  value="male"
+  name="gender">
+  
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+  
+</div>
+
+<div class="form-check-inline">
+  <input class="form-check-input" 
+  type="radio" 
+  required
+  id="exampleRadios1" 
+  value="female"
+  name="gender">
+  <label class="form-check-label" for="exampleRadios2">
+    Female
+  </label>
+</div> -->
+
+      <!-- <select id="inputState" class="form-control input-group mt-3" name="gender">
+        <option selected>Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+      </select> -->
+      
+      <!-- Gender field -->
+  <label for="inputEmail4">Gender : </label>
+  <div class="form-check-inline">
+  <input class="form-check-input" 
+  type="radio" 
+  
+  th:classappend="${#fields.hasErrors('gender') ? 'is-invalid':''}"
+  required
+  id="exampleRadios1" 
+  value="male"
+  name="gender">
+  
+  <label class="form-check-label" for="exampleRadios1">
+    Male
+  </label>
+  
+</div>
+
+<div class="form-check-inline">
+  <input class="form-check-input" 
+  type="radio" 
+  required
+  id="exampleRadios1" 
+  value="female"
+  name="gender">
+  <label class="form-check-label" for="exampleRadios2">
+    Female
+  </label>
+  
+</div>
+<div class="invalid-feedback" th:each="e: ${#fields.errors('gender')}" th:text="${e}">
+</div>
+
+<!-- Image Field -->
+  					
+  	<div class="form-group input-group mt-3">
+    <label for="exampleFormControlFile1">Profile Photo</label>
+    <input type="file"
+    th:value="${students.profileImage}"
+    class="form-control-file" 
+    id="exampleFormControlFile1"
+    name="image">
+  </div>
+  
+							
+							<div class="container text-center">
+								<button class="btn btn-outline-primary">Save Student</button>
+							</div>
+							
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+		<script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+	</section>
+</body>
+</html>

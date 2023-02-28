@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+				th:replace="student/student_base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title th:text="${title}"></title>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card-body my-5">
+					<div class="container text-center">
+					<img style="height: 200px; width: 200px;" class="my_profile_picture" alt="profile photo" th:src="@{'/img/night.jpg'}">
+					</div>
+					
+					<h1 class="class text-center mt-3 text-secondary font-italic font-weight-light">
+						Start adding your students
+					</h1>
+					<a th:href="@{/teacher/add-student}" class="btn btn-success mt-4 btn-block text-uppercase">Add New Student</a>
+				</div>
+			</div>
+		</div>
+	
+	
+	<script>
+		$(document).ready(() => {
+			$(".item").removeClass("active");
+			$("#home").addClass("active");
+		});
+	</script>
+	</section>
+</body>
+</html>

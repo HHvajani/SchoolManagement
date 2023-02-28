@@ -1,0 +1,276 @@
+body{
+	background:rgb(255, 255, 255)!important;
+	
+	
+}
+.banner{
+	width:100%;
+	height:93vh;
+	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../img/about-kailash-n.jpg);
+	background-size:cover;
+	color:white;
+	position: relative;
+	
+}
+.formm{
+	
+	flex-direction:column;
+	height: 700px;
+	width: 600px;
+	border: 2px solid black;
+	align-items: center;
+	margin: auto;
+	margin-top: 30px;
+	margin:auto;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: inset -5px -5px rgba(0,0,0,0.1);
+	border-radius: 30px;
+}
+
+
+/* Responsive and transparent navbar */
+.form{
+	display: flex;
+	flex-direction:column;
+	height: 620px;
+	width: 400px;
+	border: 1px solid black;
+	align-items: center;
+	margin: auto;
+	margin-top: 5px;
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+	border-radius: 25px;
+}
+
+.form h3{
+	color: white;
+	font-size: 2rem;
+	border-bottom: 4px solid rgba(255,255,255,0.5);
+	margin: 50px;
+}
+
+/* for signup */
+
+
+.font{
+	color: white;
+}
+.font1{
+	color: black;
+}
+
+.box{
+	padding:12px;
+	margin: 10px;
+
+	border: none;
+	outline: none;
+	
+	
+	
+	color: white;
+	font-size: 1rem;
+}
+.boxx{
+	padding:12px;
+	margin: 10px;
+
+	border: none;
+	outline: none;
+	
+	
+	margin-left:10px;
+	color: black;
+	font-size: 1rem;
+}
+
+
+
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus{
+   color:red !important;
+}
+
+.light{
+	background: white;
+}
+
+.banner{
+	width:100%;
+	height:93vh;
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/about-kailash-n.jpg);
+	background-size:cover;
+	color:white;
+	
+}
+.active{
+	
+	color: black !important;
+}
+
+.my-card{
+	padding:20px;
+	background:#FFFFFF;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  height: 100vh;
+}
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 700px;
+  height: 450px;
+  border: 2px solid #9C9C9C;
+  background-color: white;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 15px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -105px;
+}
+
+/* sidebar style*/
+
+@media only screen and (max-width: 600px) {
+	.sidebar{
+		display: none;
+		width: 80% !important;
+		background: white;
+		height: 100vh;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content{
+		margin-left: 0%!important;
+	}
+}
+
+.sidebar{
+	width:18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 45px;
+	z-index: 99999999999999;
+}
+.sidebar a{
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+}
+.sidebar a:hover{
+	background: #e2e2e2;
+}
+.sidebar .divider{
+	height: .5px;
+	width:100%;
+	background: black;
+	margin-top: 10px;
+}
+.content{
+	margin-left: 20%;
+}
+.sidebar .crossBtn{
+	position: absolute;
+	top:0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+.my_profile_picture{
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: 50%;
+	
+}
+
+/* Search css */
+
+.search-container{
+	position: relative;
+}
+.search-result{
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid gray;
+	display: none;
+}
+/* Home page */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
